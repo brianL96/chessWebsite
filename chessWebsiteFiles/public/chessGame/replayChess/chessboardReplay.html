@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+
+<html lang="en" dir="ltr">
+
+<head>
+	<meta charset="UTF-8">
+	<title>Replay ChessBoard</title>
+	<link rel="stylesheet" href="../../chessGame/replayChess/boardStyleReplay.css"></link>
+	<link rel="stylesheet" type="text/css" href="../../css/output.css">
+</head>
+
+<body class="bg-zinc-300">
+
+	<div id="wrapper-div">
+		<nav class="min-w-120 flex flex-col h-24 justify-around header-sm:flex-row header-sm:h-16 header-sm:justify-start items-center border-b-2 border-black bg-sky-100 font-robot font-thin w-full fixed top-0 z-20" id="fixed-header">
+			<div class="flex flex-row justify-around w-full text-lg md:text-xl border-b-gray-300 border-b-2 header-sm:border-b-0" id="fixed-header-menu">
+				<h2 id="home-tag" class="hover:font-bold hover:scale-125 transition ease-out duration-75 hover:text-green-600"><a href="/home">Home</a></h2>
+				<h2 id="my-profile-tag" class=" hover:font-bold hover:scale-125 transition ease-out duration-75 hover:text-green-600" ><a href="/home/profile">My Profile</a></h2>
+				<h2 id="play-tag" class=" hover:font-bold hover:scale-125 transition ease-out duration-75 hover:text-green-600"><a href="/home/gamePage">Play Games</a></h2>
+				<h2 id="leaderboards-tag" class=" hover:font-bold hover:scale-125 transition ease-out duration-75 hover:text-green-600"><a href="/home/leaderboards">Leaderboards</a></h2>
+				<h2 id="rules-tag" class="hover:font-bold hover:scale-125 transition ease-out duration-75 hover:text-green-600"><a href="/home/rules">Rules</a></h2>
+			</div>
+		</nav>
+	</div>
+
+
+	<div id="wrapper-div" class="w-192 md:w-275 min-w-full m-auto min-h-screen">
+
+		<div class="flex flex-col md:flex-row justify-center mt-24 header-sm:mt-16 mb-16 w-full ">
+
+			<div id="leftSide" class="mt-5 ml-10 w-120.5 h-123.5 md:w-60">
+
+				<div id="game-header-banner" class="flex flex-col justify-start w-120.5 md:w-60 h-94.5 bg-slate-100 border border-green-800">
+
+					<div class="flex flex-col h-17.5">
+						<div class="h-1/3">
+							<h3 id="left-side-header" class="text-lg pl-1">Name Of The Game:</h3>
+						</div>
+						<div id="gameName" class="flex flex-col justify-center overflow-y-hidden overflow-x-auto whitespace-nowrap h-2/3 text-lg pl-3"></div>
+					</div>
+					<hr>
+					<div class="flex flex-col justify-around h-16">
+						<h3 id="left-side-opponent-header" class="text-lg pl-1">Opponent:</h3>
+						<div id="opponentName" class="text-lg pl-3"></div>
+					</div>
+					<hr>
+					<div class="flex flex-col h-61">
+						<h3 id="left-side-status-header" class="text-lg pl-1">Game Status:</h3>
+						<h2 id="edited-label" class="text-red-500 text-lg pl-3"></h2>
+						<h2 id="turn-label" class="text-lg pl-3"></h2>
+						<h2 id="check-warning" class="text-lg pl-3"></h2>	
+					</div>
+				</div>
+
+				<div class="flex flex-row justify-center mt-5 w-120.5 md:w-60 h-24">
+					<button type ="submit" id="showGames-btn" class="w-full h-full bg-green-500 hover:bg-green-600 border active:bg-green-700 duration-150 border-green-800"><h2 class="text-white text-3xl md:text-lg text-center">Display Games</h2></button>
+				</div>
+
+			</div>
+		
+		
+			<div id="board-panel" class="flex flex-col w-130.5 mb-0">
+				<div id="board" class="flex flex-wrap w-120.5 h-120.5 bg-gray-500 mt-5 ml-10 border border-amber-900"></div>
+				<div id="board-btn-panel" class="mt-4 ml-10 w-120.5 flex flex-row justify-around">
+					<button  type="submit" id="undoEdits-btn" class="w-24 h-16 border border-gray-400 bg-gray-400 rounded-md cursor-not-allowed"><h2 id="undoEditsText">Undo Edits</h2></button>
+					<button  type="submit" id="saveEdits-btn" class="w-24 h-16 border border-gray-400 bg-gray-200 hover:bg-gray-300 active:bg-gray-400 duration-150 rounded-md"><h2>Save Edits</h2></button>
+					<button type="submit" id="prevMove-btn" class="w-24 h-16 border border-gray-400 bg-gray-200 hover:bg-gray-300 active:bg-gray-400 duration-150 rounded-md"><h2>Prev. Move</h2></button>
+					<button type="submit" id="nextMove-btn" class="w-24 h-16 border border-gray-400 bg-gray-200 hover:bg-gray-300 active:bg-gray-400 duration-150 rounded-md"><h2>Next Move</h2></button>
+				</div>
+			</div>
+
+			<div id="right-side-bar" class="flex flex-col md:flex-row h-48 md:h-60 w-130.5 md:w-60 mt-10 md:mt-5 ml-6">
+			
+				<div id="move-counter-container" class="flex flex-col justify-start h-28 md:h-60 ml-4 w-120.5 md:w-32 border border-black bg-slate-200 mb-2 text-lg md:text-base">
+					<div class="h-1/3 md:h-1/6">
+						<h2 id="counter-label" class="text-center">Moves Passed:</h2>
+					</div>
+					<div class="h-2/3 flex flex-row md:flex-col justify-around">
+						<h2 id="move-counter-current" class="text-center text-md"></h2>
+						<h1 class="text-center text-lg">/</h1>
+						<h2 id="move-counter-total" class="text-center text-md"></h2>
+					</div>
+				</div>
+		
+			</div>
+
+
+		</div>
+
+
+		<!-- Promotion Modal Box -->
+		<div id="promotion-modal" class="hidden fixed z-30 top-20 left-20 sm:left-1/3 rounded-md bg-gray-100 border border-gray-500 w-80 h-48">
+		
+			<div id="promotion-modal-content" class="flex flex-col justify-start h-full w-full">
+
+				<div class="flex flex-col justify-center w-full h-1/3 border-b border-gray-300">
+					<h3 class="text-center">Select Pawn Promotion Piece</h3>
+				</div>
+
+				<div id="showcase" class="flex flex-row justify-around w-full h-1/3 align-middle border-b border-gray-300">
+					<div selected="false" piece="empty" shade="light" id="showcaseQueen" class="w-15 h-15 border border-black border-solid bg-burley-wood"></div>
+					<div selected="false" piece="empty" shade="dark" id="showcaseKnight" class="w-15 h-15 border border-black border-solid bg-chocolate"></div>
+					<div selected="false" piece="empty" shade="light" id="showcaseRook" class="w-15 h-15 border border-black border-solid bg-burley-wood"></div>
+					<div selected="false" piece="empty" shade="dark" id="showcaseBishop" class="w-15 h-15 border border-black border-solid bg-chocolate"></div>
+				</div>
+
+				<div class="flex flex-row justify-center w-full h-1/3">
+					<div class="h-full flex flex-col justify-center">
+						<button type="submit" id="promotion-select-btn" class="h-12 w-24 border border-gray-400 bg-gray-200 hover:bg-gray-300 rounded-md"><h2>Select Piece</h2></button>
+					</div>
+				</div>
+
+			</div>
+
+		</div>
+
+
+
+		<!--Save Game Modal-->
+
+		<div id="saveGameModal" class="shadow-lg shadow-gray-900 hidden fixed w-96 h-92.5 bg-gray-200 border border-gray-800 z-30 top-20 left-12  md:left-1/3 rounded-md">
+
+			<div id="save-game-modal-header" class="flex flex-row justify-start w-full h-1/5 border-b border-gray-300 text-center align-middle">
+				<div class="flex flex-col justify-center w-1/2 text-center">
+					<h3 id="save-modal-header-text" class="text-2xl text-black">Save Your Edits</h3>
+				</div>
+				<div class="flex flex-row justify-end w-1/2">
+					<div class="flex flex-col justify-center">
+						<span id="saveGameModal-close" class="mr-4 w-8 text-2xl text-gray-500 hover:bg-gray-300 hover:cursor-pointer">&times;</span>
+					</div>
+				</div>
+			</div>
+
+			<div id="saveModal-game-info" class="flex flex-col w-full h-1/4 justify-between border-b border-gray-300">
+				<h4 id="saveModal-resultText" class="ml-2">Result: </h4>
+				<h4 id="saveModal-moveNumText" class="ml-2">Number Of Moves: </h4>
+				<h4 id="saveModal-dateText" class="ml-2">Date: </h4>
+			</div>
+
+			<div id="saveModal-submit" class="h-1/4 border-b border-gray-300">
+				<div class="w-full h-1/2 flex flex-col justify-center">
+					<input type="text" id="toSaveGameName" class="bg-gray-100 border border-gray-500 rounded-md w-3/4 h-3/4 m-auto focus:ring-0 focus:outline-none focus:border-2 focus:border-green-600" placeholder="Enter Game Name">
+				</div>
+				<div class="w-full h-1/2 flex flex-row justify-center">
+					<h4 id="saveModal-warning" class="text-red-600 font-bold text-center"></h4>
+				</div>
+			</div>
+					
+			<div id="saveModal-btn-panel" class="h-1/4 flex flex-row justify-around">
+				<div class="flex flex-col justify-center">
+					<button class="w-28 h-16 border border-green-700 bg-green-500 hover:bg-green-600 active:bg-green-700 duration-150 rounded-md" type="submit" id="finishSave-btn"><h2 class="text-white">Finish Save</h2></button>
+				</div>
+				<div class="flex flex-col justify-center">
+					<button class="w-28 h-16 border border-green-700 bg-green-500 hover:bg-green-600 active:bg-green-700 duration-150 rounded-md" type="submit" id="view-btn"><h2 class="text-white">View Saved Games</h2></button>
+				</div>
+				<div class="flex flex-col justify-center">
+					<button class="w-28 h-16 border border-gray-400 bg-gray-200 hover:bg-gray-300 active:bg-gray-400 duration-150 rounded-md" type="submit" id="save-cancel-btn"><h2>Cancel</h2></button>
+				</div>
+			</div>
+
+		</div>
+
+
+		<!-- View/Delete Modal Box -->
+		<div id="view-games-modal" class="shadow-lg shadow-gray-900 hidden fixed z-30 top-16 left-8 md:left-1/3 md:top-20 rounded-md bg-gray-200 border border-gray-800 h-114 w-130.5">
+
+			<div id="view-games-modal-header" class="flex flex-row justify-start w-full h-16 border-b border-gray-300 text-center align-middle">
+				<div class="flex flex-col justify-center w-4/5 pl-1 text-center">
+					<h3 id="vd-modal-header-text" class="text-2xl text-black" >View and Load Your Saved Games</h3>
+				</div>
+				<div class="flex flex-row justify-end w-1/5">
+					<div class="flex flex-col justify-center">
+						<span id="vd-viewGamesModal-close" class="mr-4 w-8 text-2xl text-gray-500 hover:bg-gray-300 hover:cursor-pointer">&times;</span>
+					</div>
+
+				</div>
+			</div>
+
+			<div id="show-type-selection" class="flex flex-row justify-start h-16">
+				<div class="flex flex-col w-1/2 h-full">
+					<div class="w-52 h-1/2 mt-2 ml-1 mb-0">
+						<div id='vd-select-game-mode' class="flex flex-col justify-center text-center border border-green-700 bg-green-600 hover:bg-green-500 hover:cursor-pointer active:bg-green-700 duration-150">
+							<h2 class="text-md text-white">Select Game Mode</h2>
+						</div>
+					</div>
+
+					<div id="vertical-dropdown" class="hidden absolute z-40 overflow-y-auto w-52 h-48 mt-8.5 ml-1 bg-slate-500 border-x border-b border-black">
+						<div class="bg-slate-400 border-x border-b border-gray-400 h-10 w-full shrink-0 hover:cursor-pointer" mode="all" id="v-drop-all">All Games</div>
+						<div class="bg-slate-200 hover:bg-slate-300 border-x border-b border-gray-400 h-10 w-full shrink-0 hover:cursor-pointer" mode="classic" id="v-drop-classic">Classic</div>
+						<div class="bg-slate-200 hover:bg-slate-300 border-x border-b border-gray-400 h-10 w-full shrink-0 hover:cursor-pointer" mode="koth" id="v-drop-koth">K.O.T.H.</div>
+						<div class="bg-slate-200 hover:bg-slate-300 border-x border-b border-gray-400 h-10 w-full shrink-0 hover:cursor-pointer" mode="cotlb" id="v-drop-cotlb">C.O.T.L.B.</div>
+						<div class="bg-slate-200 hover:bg-slate-300 border-x border-b border-gray-400 h-10 w-full shrink-0 hover:cursor-pointer" mode="speed" id="v-drop-speed">Speed</div>
+					</div>
+
+				</div>
+
+				<div class="flex flex-row justify-center w-1/2 h-full">
+					<div class="w-52 h-1/2 mt-2 mx-auto mb-0">
+						<div class="flex flex-col justify-center text-center">
+							<h3 id="sort-header-text" class="text-xl font-medium">All Games Displayed</h3>
+						</div>
+					</div>
+				</div>
+
+			</div>
+
+			<div id="game-info-div" class="flex flex-row justify-start h-56 w-full border-b border-gray-300">
+				<div id="game-info-sidebar" class=" flex flex-col justify-start w-1/2 h-full">
+					<div class="h-1/6 w-full">
+						<h4 id="viewModal-loadText" class="pl-1 text-amber-600 font-bold"></h4>
+					</div>
+					<div class="flex flex-col justify-around h-5/6 w-full">
+						<h4 id="viewModal-gameModeText" class="pl-1">Game Mode: </h4>
+						<h4 id="viewModal-countText" class="pl-1">Number Of Moves: </h4>
+						<h4 id="viewModal-resultText" class="pl-1">Result: </h4>
+						<h4 id="viewModal-opponentText" class="pl-1">Opponent: </h4>
+						<h4 id="viewModal-dateText" class="pl-1">Date: </h4>
+					</div>
+				</div>
+			
+				<div class="w-1/2 h-full flex flex-col justify-center">
+					<div id="vd-game-info-vertical-menu" class="flex flex-col justify-start overflow-y-auto w-5/6 h-48 m-auto bg-slate-300 border border-black"></div>
+				</div>
+			</div>
+
+
+			<div id="view-modal-error-panel" class="flex flex-row justify-center h-10 w-full border-b border-gray-300">
+				<h4 id="view-modal-warning" class="text-red-600 font-bold text-center"></h4>
+			</div>
+		
+
+			<div id="view-modal-btn-panel" class="flex flew-row justify-around h-16 w-full">
+				<div class="flex flex-col justify-center">
+					<button  id="load-btn" type="submit" class="w-36 h-12 border text-white border-green-700 bg-green-600 hover:bg-green-700 active:bg-green-800 rounded-md duration-150 shadow"><h2>Load Game</h2></button>
+				</div>
+				<div class="flex flex-col justify-center">
+					<button  id="delete-btn" type="submit" class="w-36 h-12 border text-white border-red-700 bg-red-600 hover:bg-red-700 active:bg-red-800 rounded-md duration-150 shadow"><h2>Delete Game</h2></button>
+				</div>
+			</div>
+
+		</div>
+
+	</div>
+
+	<footer class="h-auto w-full min-w-96 mt-12 pb-2 bg-green-700 text-white border-t border-black" id="bottom-footer">
+		<div class="w-full flex flex-row justify-between mt-4">
+			<h1 class="ml-4">Brian Lemes</h1>
+			<h1><a class="hover:text-gray-700 underline" href="/home#about-section">About</a></h1>
+			<h1 class="mr-4">Contact: brian.a.lemes.1996@gmail.com</h1>
+		</div>
+		<div class="mt-2">
+			<h1 class="ml-3">&copy; Brian Lemes' Chess Website USA, Inc. All rights reserved.</h1>
+		</div>
+	</footer>
+
+	<script src="../../chessGame/generalChess/pawnMoves.js"></script>
+	<script src="../../chessGame/generalChess/rookMoves.js"></script>
+	<script src="../../chessGame/generalChess/knightMoves.js"></script>
+	<script src="../../chessGame/generalChess/bishopMoves.js"></script>
+	<script src="../../chessGame/generalChess/queenMoves.js"></script>
+	<script src="../../chessGame/generalChess/kingMoves.js"></script>
+	<script src="../../chessGame/generalChess/gameSaver.js"></script>
+	<script src="../../chessGame/generalChess/boardApp.js"></script>
+	<script src="../../chessGame/generalChess/additionalDraws.js"></script>
+	<script src="../../chessGame/replayChess/replayApp.js"></script>
+	<script src="../../chessGame/generalChess/footerScroll.js"></script>
+
+</body>
+
+</html>

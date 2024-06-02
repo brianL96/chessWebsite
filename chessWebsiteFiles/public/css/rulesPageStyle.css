@@ -1,0 +1,139 @@
+body{
+	/*background-color: #E1F1F5;*/
+	background-color: #CEF5EA;
+}
+
+
+
+.fixed-header{
+	display: flex;
+	flex-direction: row;
+	flex-wrap: nowrap;
+	justify-content: flex-start;
+	align-items: stretch;
+	position: fixed;
+	margin-left: 0px;
+	margin-right: 0px;
+	top: 0;
+	min-width: 100%;
+	height: 66px;
+	background-color: #E6F0EF;	
+}
+
+
+.fixed-header a{
+	text-decoration: none;
+	color: black;
+	text-align: center; 
+	padding-left: 0px;
+}
+
+.fixed-header h2{
+	margin-top: 0px;
+	margin-bottom: 0px;
+	margin-right: 0px;
+	margin-left: 0px;
+	padding-left: 10px;
+	padding-right: 10px;
+	text-align: center;
+	padding-top: 17px;
+	font-size: 24px;
+}
+
+
+
+
+
+.fixed-header #my-profile-tag:hover{
+	background-color: #089BCC;
+	color: #2E12E3;
+}
+
+
+.fixed-header #home-tag:hover{
+	background-color: #089BCC;
+	color: #2E12E3;
+}
+
+.fixed-header #play-tag:hover{
+	background-color: #089BCC;
+	color: #2E12E3;
+}
+
+.fixed-header #my-profile-tag{
+	min-width: 110px;
+	max-width: 110px;
+	margin-left: 0px;
+}
+
+.fixed-header #play-tag{
+	min-width: 140px;
+}
+
+.fixed-header #leaderboards-tag:hover{
+	background-color: #089BCC;
+	color: #2E12E3;
+}
+
+.fixed-header #rules-tag{
+	background-color: #CEF5EA;
+	color: #2E12E3;
+}
+
+.fixed-header .header-login-btn{
+	width: 160px;
+	height: 40px;
+	margin-left: 400px;
+	margin-top: 10px;
+	font-size: 18px;
+	font-family: Arial, Helvetica;
+	border-radius: 25px;
+}
+
+.fixed-header .header-signup-btn{
+	width: 160px;
+	height: 40px;
+	margin-top: 10px;
+	margin-left: 20px;
+	font-size: 18px;
+	font-family: Arial, Helvetica;
+	border-radius: 25px;
+}
+
+.fixed-header input:hover{
+	background-color: #C8E0DD;
+}
+
+.fixed-header .header-hello{
+	margin-left: 140px;
+	margin-right: 0px;
+
+}
+
+.fixed-header .header-signout-btn{
+	width: 160px;
+	height: 40px;
+	font-size: 18px;
+	font-family: Arial, Helvetica;
+	border-radius: 25px;
+	position: absolute;
+	margin-left: 1150px;
+	padding-left: 0px;
+	margin-top: 10px;
+}
+
+#firstHeader{
+	margin-top: 90px;
+}
+
+.majorHeader{
+	color: #1CAD43;
+}
+
+.minorHeader{
+	color: #427AEB;
+}
+
+.rulesPart{
+	font-family: Arial, Helvetica;
+}
