@@ -14,8 +14,6 @@ let kothSelector = document.querySelector("#koth-mode");
 let cotlbSelector = document.querySelector("#cotlb-mode");
 let speedSelector = document.querySelector("#speed-mode");
 
-//let currentRoomNode = 0;
-
 let currentlySignedIn = true;
 let currentGameModeSelected = "Classic";
 let currentGameModeDisplayed = null;
