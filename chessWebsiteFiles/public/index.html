@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Brian's Chess Website</title>
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+	<link rel="stylesheet" type="text/css" href="../css/output.css">
+</head>
+
+<body>
+
+
+	<nav class="min-w-88 flex flex-col justify-center h-16 border-y-2 border-black bg-sky-100 font-robot font-thin w-full z-20" id="fixed-header-top">
+		<div class="flex flex-row justify-between h-1/2 w-full text-lg md:text-xl" id="fixed-header-menu-top">
+			<h2 id="welcome-Sign" class="text-black ml-2">Welcome To My Website</h2>
+		</div>
+	</nav>
+
+
+	<div id="showcase">
+		<div id="main-image-container">
+			<img src="../images/classicGame.png" id="main-image">
+		</div>
+		<div id="showcase-image-menu">
+			<div id="square-1">
+				<svg>
+					<circle id="f-circle-1" cy="50%" cx="50%" r="13"/>
+				</svg>
+				<div id="rect-1" value="0"></div>
+			</div>
+			<div id="square-2">
+				<svg>
+					<circle id="f-circle-2" cy="50%" cx="50%" r="13"/>
+				</svg>
+				<div id="rect-2" value="1"></div>
+			</div>
+			<div id="square-3">
+				<svg>
+					<circle id="f-circle-3" cy="50%" cx="50%" r="13"/>
+				</svg>
+				<div id="rect-3" value="2"></div>
+			</div>
+			<div id="square-4">
+				<svg>
+					<circle id="f-circle-4" cy="50%" cx="50%" r="13"/>
+				</svg>
+				<div id="rect-4" value="3"></div>
+			</div>
+			<div id="square-5">
+				<svg>
+					<circle id="f-circle-5" cy="50%" cx="50%" r="13"/>
+				</svg>
+				<div id="rect-5" value="4"></div>
+			</div>
+			<div id="square-6">
+				<svg>
+					<circle id="f-circle-6" cy="50%" cx="50%" r="13"/>
+				</svg>
+				<div id="rect-6" value="5"></div>
+			</div>
+			<div id="square-7">
+				<svg>
+					<circle id="f-circle-7" cy="50%" cx="50%" r="13"/>
+				</svg>
+				<div id="rect-7" value="6"></div>
+			</div>
+		</div>
+	</div>
+
+	<nav class="min-w-88 flex flex-col justify-center h-16 items-center border-y-2 border-black bg-sky-100 font-robot font-thin w-full z-20" id="fixed-header-bottom">
+		<div class="flex flex-row justify-around w-full text-lg md:text-xl" id="fixed-header-menu-bottom">
+			<h2 id="my-profile-tag" class=" hover:font-bold hover:scale-125 transition ease-out duration-75 hover:text-green-600" ><a href="/home/profile">My Profile</a></h2>
+			<h2 id="play-tag" class=" hover:font-bold hover:scale-125 transition ease-out duration-75 hover:text-green-600"><a href="/home/gamePage">Play Games</a></h2>
+			<h2 id="leaderboards-tag" class=" hover:font-bold hover:scale-125 transition ease-out duration-75 hover:text-green-600"><a href="/home/leaderboards">Leaderboards</a></h2>
+			<h2 id="rules-tag" class="hover:font-bold hover:scale-125 transition ease-out duration-75 hover:text-green-600"><a href="/home/rules">Rules</a></h2>
+		</div>
+	</nav>
+
+	<div id="about-section" class="min-w-88 min-h-screen h-auto mt-0 pt-4 pb-10 bg-zinc-400">
+	
+		<div id="greetings-section-holder" class="flex flex-row justify-center w-full">
+			<div id="greetings-section-details" class="w-9/10 h-auto bg-white border border-gray-800">
+				<div class="mt-3 ml-5 mr-10 font-bold">
+					<h3>Welcome to my website. Here is what you need to know to get started:</h3>
+				</div>
+				<ul class="list-disc mt-3 ml-6 mr-10 mb-4">
+					<li><h3>To access most features, you need to sign up for an account and then log in.</h3></li>
+					<li><h3 class="mt-1">The email you enter is not verified: entering a unique and valid string of characters is sufficient.</h3></li>
+					<li><h3 class="mt-1">To make demonstrating PvP easier, this website uses Session Storage instead of Local Storage. If you'd like to test PvP features, you're likely to have to create a second account. You can then log into each account from a seperate tab in your browser (probably easiest and quickest method), or you can use a different browser for each account, or you can log on from different computers. Creating an account is very quick and easy.</h3></li>
+				</ul>
+			</div>
+		</div>
+
+		<div id="about-section-holder" class="flex flex-row justify-center mt-3 w-full">
+			<div id="about-section-features" class="w-9/10 h-auto bg-white border border-gray-800">
+				
+				<div class="mt-3 ml-5 mb-3 mr-10">
+					<h1 class="text-xl font-bold">Features:</h1>
+				</div>
+			
+				<ul class="list-disc ml-10 mr-10">
+					<li><h3>Users can play four versions of chess.</h3></li>
+					<li><h3>Users can concurrently play in up to four rooms, on condition that each of those rooms is in a different game mode.</h3></li>
+					<li><h3>This application will keep track of personal stats for each game mode, including an ELO score.</h3></li>
+					<li><h3>Players are ranked according to ELO score on the Leaderboards Page.</h3></li>
+					<li><h3>Users can save games, replay or edit them, and save the edits.</h3></li>
+				</ul>
+
+				<div class="mt-3 ml-6 mb-3 mr-10">
+					<h3 class="font-semibold">A user with the right credentials can log into the Admin Page. From there they can: </h3>
+				</div>
+
+				<ul class="list-disc ml-12 mr-10 mb-4">
+					<li><h3>View general information - the date and time the server started up, the last time an admin logged in, how many times an admin has logged in since the server started, etc.</h3></li>
+					<li><h3>View particular game mode information - the most amount of concurrently fully occupied rooms, the amount of time spent at that highest occupation, etc.</h3></li>
+					<li><h3>Index and display specific room information, including currently occupying players, current game status, the amount of rematches played, the date and time the first match ended, etc.</h3></li>
+					<li><h3>Turn room(s) off - which prevents a user from entering that room, and players currently inside that room cannot set up a rematch.</h3></li>
+					<li><h3>Turn room(s) on.</h3></li>
+					<li><h3>Kick players from room(s).</h3></li>
+					<li><h3>Adjust the amount of rooms a particular game mode has open to users.</h3></li>
+				</ul>
+				
+
+
+
+			</div>
+		</div>
+
+	</div>
+
+	<footer class="h-auto min-w-88 w-full pb-2 bg-green-700 text-white border-t border-black" id="bottom-footer">
+		<div class="w-full flex flex-row justify-between mt-4">
+			<h1 class="ml-4">Brian Lemes</h1>
+			<h1><a class="hover:text-gray-700 underline" href="#about-section">About</a></h1>
+			<h1 class="mr-4">Contact: brian.a.lemes.1996@gmail.com</h1>
+		</div>
+		<div class="mt-2">
+			<h1 class="ml-3">&copy; Brian Lemes' Chess Website USA, Inc. All rights reserved.</h1>
+		</div>
+	</footer>
+	 
+	<script src="homepageApp.js"></script>	
+	
+	
+
+</body>
+</html>

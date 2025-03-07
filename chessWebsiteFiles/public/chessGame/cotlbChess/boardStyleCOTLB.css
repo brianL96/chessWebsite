@@ -1,0 +1,75 @@
+div[elementType="displayVerticalMenuElement"]::-webkit-scrollbar{
+	display: none;
+}
+
+div[elementType="displayVerticalMenuElement"]{
+	scrollbar-width: none;
+}
+
+
+#board div[piece = "blackPawn"]{
+	background-image: url('../../chessGame/chessPieces/blackPawn.png');
+	background-repeat: no-repeat;
+	background-position: center;
+
+}
+
+#board div[piece = "blackKnight"]{
+	background-image: url('../../chessGame/chessPieces/blackKnight.png');
+	background-repeat: no-repeat;
+	background-position: center;
+
+}
+
+
+#board div[piece = "blackQueen"]{
+	background-image: url('../../chessGame/chessPieces/blackQueen.png');
+	background-repeat: no-repeat;
+	background-position: center;
+
+}
+
+#board div[piece = "blackKing"]{
+	background-image: url('../../chessGame/chessPieces/blackKing.png');
+	background-repeat: no-repeat;
+	background-position: center;
+}
+
+
+#board div[piece = "whitePawn"]{
+	background-image: url('../../chessGame/chessPieces/whitePawn.png');
+	background-repeat: no-repeat;
+	background-position: center;
+
+}
+
+
+#board div[piece = "whiteKnight"]{
+	background-image: url('../../chessGame/chessPieces/whiteKnight.png');
+	background-repeat: no-repeat;
+	background-position: center;
+}
+
+
+#board div[piece = "whiteQueen"]{
+	background-image: url('../../chessGame/chessPieces/whiteQueen.png');
+	background-repeat: no-repeat;
+	background-position: center;
+
+}
+
+#board div[piece = "whiteKing"]{
+	background-image: url('../../chessGame/chessPieces/whiteKing.png');
+	background-repeat: no-repeat;
+	background-position: center;
+
+}
+
+#bottom-footer{
+	margin-left: 0rem;
+}
+
+
+
+
+

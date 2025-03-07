@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Rules Page</title>
+	<!--<link rel="stylesheet" type="text/css" href="../css/rulesPageStyle.css">-->
+	<link rel="stylesheet" type="text/css" href="../css/output.css">
+</head>
+
+<body class="bg-cyan-700">
+
+	<div id="wrapper-div">
+		<nav class="min-w-104 flex flex-col h-24 justify-around header-sm:flex-row header-sm:h-16 header-sm:justify-start items-center border-b-2 border-black bg-sky-100 font-robot font-thin w-full fixed top-0 z-20" id="fixed-header">
+			<div class="flex flex-row justify-around w-full text-lg md:text-xl border-b-gray-300 border-b-2 header-sm:border-b-0" id="fixed-header-menu">
+				<h2 id="home-tag" class="hover:font-bold hover:scale-125 transition ease-out duration-75 hover:text-green-600"><a href="/home">Home</a></h2>
+				<h2 id="my-profile-tag" class=" hover:font-bold hover:scale-125 transition ease-out duration-75 hover:text-green-600" ><a href="/home/profile">My Profile</a></h2>
+				<h2 id="play-tag" class=" hover:font-bold hover:scale-125 transition ease-out duration-75 hover:text-green-600"><a href="/home/gamePage">Play Games</a></h2>
+				<h2 id="leaderboards-tag" class=" hover:font-bold hover:scale-125 transition ease-out duration-75 hover:text-green-600"><a href="/home/leaderboards">Leaderboards</a></h2>
+				<h2 id="rules-tag" class="hover:font-bold hover:scale-125 transition ease-out duration-75 hover:text-green-600"><a href="/home/rules">Rules</a></h2>
+			</div>
+		</nav>
+
+	</div>
+
+	<div class="w-96 min-w-full min-h-screen m-auto">
+
+		<div class="mt-28 header-sm:mt-24 mb-16 w-full flex flex-row justify-center">
+			<div class="w-4/5 flex flex-row justify-start">
+				<div id="rules-links-wrapper" class="bg-white border-2 w-96 border-cyan-900 text-blue-700 text-lg">
+					<h2 class="mt-3 ml-2 mr-2"><span class="text-black">1 </span><a class="hover:text-blue-400" href="#general-div">General Rules & Terminology:</a></h2>
+					<h2 class="mt-2 ml-2 mr-2"><span class="text-black">2 </span><a class="hover:text-blue-400" href="#winning-div">Winning and Losing a Match:</a></h2>
+					<h2 class="mt-2 ml-2 mr-2"><span class="text-black">3 </span><a class="hover:text-blue-400" href="#draw-div">Matches Concluding In A Draw:</a></h2>
+					<h2 class="mt-2 ml-2 mr-2"><span class="text-black">4 </span><a class="hover:text-blue-400" href="#disconnect-div">Getting Disconnected From A Room:</a></h2>
+					<h2 class="mt-2 ml-2 mr-2"><span class="text-black">5 </span><a class="hover:text-blue-400" href="#save-replay-div">Saving and Replaying Games:</a></h2>
+					<h2 class="mt-2 ml-2 mr-2 mb-3"><span class="text-black">6 </span><a class="hover:text-blue-400" href="#elo-div">ELO:</a></h2>
+				</div>
+			</div>
+		</div>
+
+		<div id="rules-wrapper" class="mt-8 mb-32 w-full flex flex-row justify-center">
+
+			<div id="rules-part" class="bg-white border-2 w-4/5 border-cyan-900">
+
+				<div id="general-div" class="mb-7 scroll-mt-28 header-sm:scroll-mt-20">
+
+					<div class="ml-2 mt-3 mr-3">
+						<h1 id="firstHeader" class="text-2xl">General Rules & Terminology:</h1>
+					</div>
+
+					<div class="ml-8 mt-3 mr-3">
+						<li>Every chess variation on this site is a two-player game.</li>
+					</div>
+
+					<div class="ml-8 mt-3 mr-3">
+						<li>After connecting to a room, the player is assigned either white or black pieces. The player with white pieces always goes first.</li>
+					</div>
+
+					<div class="ml-8 mt-3 mr-3">
+						<li>In subsequent rematches players will switch sides.</li>
+					</div>
+
+					<div class="ml-8 mt-3 mr-3">
+						<li>A <span class="font-bold">turn</span> is completed after a player has moved a piece.</li>
+					</div>
+
+					<div class="ml-8 mt-3 mr-3">
+						<li>A <span class="font-bold">move</span> is completed after both players have completed a turn.</li>
+					</div>
+
+					<div class="ml-8 mt-3 mr-3">
+						<li>A match is considered <span class="font-bold">in progress</span> when the timer for white begins to countdown. In the first match, white's timer will countdown only after an initial move is completed. In subsequent rematches, white's timer will start right away.</li>
+					</div>
+
+					<div class="ml-8 mt-3 mr-3">
+						<li>A match is considered <span class="font-bold">not in progress </span>before white's timer starts, and after the match has concluded.</li>
+					</div>
+
+					<div class="ml-8 mt-3 mr-3">
+						<li>A <span class="font-bold">forfeit</span> occurs when a player leaves a match that is in progress.</li>
+					</div>
+
+					<div class="ml-8 mt-3 mr-3">
+						<li>A player can only be in a single match for a particular game mode (Classic, King Of The Hill, etc.) at a time.</li>
+					</div>
+
+					<div class="ml-14 mt-3 mr-3">
+						<li>However, a player can be in multiple matches at the same time, as long as each match is in a different game mode.</li>
+					</div>
+
+					<div class="ml-14 mt-3 mr-3">
+						<li>If a player tries to find a new match within a game mode they're currently playing a match in, they'll first be disconnected from their current match, which may lead to a forfeit.</li>
+					</div>
+
+				</div>
+
+				<div id="winning-div" class="border-t border-gray-300 mb-7 scroll-mt-24 header-sm:scroll-mt-20">
+
+					<div class="ml-2 mt-3 mr-3">
+						<h1 id="winning-header" class="text-2xl">Winning and Losing a Match:</h1>
+					</div>
+
+					<div class="ml-8 mt-3 mr-3">
+						<li>If a player is put in checkmate, their opponent wins.</li>
+					</div>
+
+					<div class="ml-8 mt-3 mr-3">
+						<li>If a player resigns, their opponent wins.</li>
+					</div>
+
+					<div class="ml-8 mt-3 mr-3">
+						<li>If a player's timer hits <span class="font-bold">00:00</span>, and their opponent still has sufficient pieces to checkmate them, their opponent wins.</li>
+					</div>
+
+					<div class="ml-8 mt-3 mr-3">
+						<li>If a player forfeits, their opponent wins. Any disconnect from a game in progress, other than an admin forcing a disconnect, will result in a forfeit.</li>
+					</div>
+
+					<div class="ml-8 mt-3 mr-3">
+						<li>In King Of The Hill, the player that gets their king on one of the golden squares wins.</li>
+					</div>
+
+				</div>
+
+				<div id="draw-div" class="border-t border-gray-300 mb-7 scroll-mt-24 header-sm:scroll-mt-20">
+
+					<div class="ml-2 mt-3 mr-3">
+						<h1 id="draw-header" class="text-2xl">Matches Concluding In A Draw:</h1>
+					</div>
+
+					<div class="ml-8 mt-3 mr-3">
+						<li>Once per turn either player can offer a draw. The opposing player can accept the draw, or reject the offer by moving a piece.</li>
+					</div>
+
+					<div class="ml-8 mt-3 mr-3">
+						<li>If a player's timer hits <span class="font-bold">00:00</span>, and their opponent has <span class="font-bold">insufficient pieces</span> to checkmate them, the match is declared a draw.</li>
+					</div>
+
+					<div class="ml-8 mt-3 mr-3">
+						<li>During a player's turn, if their King is not in check and there's no legal moves available to them, the game ends in stalemate.</li>
+					</div>
+
+					<div class="ml-4 mt-3 mr-3">
+						<h2 id="other-draws-header" class="text-xl">Other Draw Conditions</h2>
+					</div>
+
+					<div class="ml-8 mt-3 mr-3">
+						<li>Matches will be declared a draw if any of the conditions below are met. If more than one condition is met, the result reported follows the order they're listed here:</li>
+					</div>
+
+					<div class="ml-12 mt-3 mr-3">
+						<li><span class="font-bold">Both players lack sufficient pieces to checkmate their opponent:</span></li>
+					</div>
+
+					<div class="ml-16 mt-3 mr-3">
+						<li>Both players have only their kings.</li>
+					</div>
+
+					<div class="ml-16 mt-3 mr-3">
+						<li>One player has only their king, and the other player has only their king plus either a single knight or a single bishop.</li>
+					</div>
+
+					<div class="ml-16 mt-3 mr-3">
+						<li>Both players have only their king plus either a single knight or a single bishop.</li>
+					</div>
+
+					<div class="ml-12 mt-3 mr-3">
+						<li><span class="font-bold">The Fifty Move Rule</span>: <span class="font-bold">50</span> consecutive moves (<span class="font-bold">100</span> turns) have passed without either a pawn being moved, or a piece being captured.</li>
+					</div>
+
+					<div class="ml-12 mt-3 mr-3">
+						<li><span class="font-bold">Threefold Repetition</span>: occurs when either player encounters the same board <span class="font-bold">3</span> times:</li>
+					</div>
+
+					<div class="ml-16 mt-3 mr-3">
+						<li>All pieces on the board occupy the same spots,</li>
+					</div>
+
+					<div class="ml-16 mt-3 mr-3">
+						<li>All legal moves to the player whose turn it is are the same,</li>
+					</div>
+
+					<div class="ml-16 mt-3 mr-3">
+						<li>All remaining castling rights are the same.</li>
+					</div>
+
+					<div class="ml-16 mt-3 mr-3">
+						<li>If a particular pawn capture via en passant is availiable in one board, but not in another, then the player is not encountering the same board.</li>
+					</div>
+
+					<div class="ml-16 mt-3 mr-3">
+						<li>If a player castles either left or right, or they move their king outside of castling, then they've lost both their castling rights. If a player moves their left or right rook, they've lost the right to castle in that direction (if they still had the right). A player does not lose their right to castle, in either direction, if the corresponding rook is captured (even though castling in that direction has become impossible). Note: if a particular game mode has the player starting with no rooks on their side, they're given no castling rights.</li>
+					</div>
+
+					<div class="ml-16 mt-3 mr-3">
+						<li>Only the previous <span class="font-bold">15</span> boards of a match will be examined for Threefold Repetition.</li>
+					</div>
+
+				</div>
+
+				<div id="disconnect-div" class="border-t border-gray-300 mb-7 scroll-mt-24 header-sm:scroll-mt-20 ">
+
+					<div class="ml-2 mt-3 mr-3">
+						<h1 id="disconnect-header" class="text-2xl">Getting Disconnected From A Room:</h1>
+					</div>
+
+					<div class="ml-8 mt-3 mr-3">
+						<li>If either player leaves a match that's in progress, both players are disconnected.</li>
+					</div>
+
+					<div class="ml-8 mt-3 mr-3">
+						<li>If a player connects to a room and an opponent doesn't show up within a set time, they'll be disconnected.</li>
+					</div>
+
+					<div class="ml-8 mt-3 mr-3">
+						<li>During the first match, if a room is fully occupied and the first move isn't completed within a set time, both players are disconnected.</li>
+					</div>
+
+					<div class="ml-8 mt-3 mr-3">
+						<li>During the first match, if the player with white pieces completes a turn and then disconnects before a move is completed, any remaining player is disconnected.</li>
+					</div>
+
+					<div class="ml-8 mt-3 mr-3">
+						<li>After a match is completed, if a rematch is not agreed upon within a set time, or either player leaves before a rematch is agreed upon, any remaining player is disconnected.</li>
+					</div>
+
+				</div>
+
+				<div id="save-replay-div" class="border-t border-gray-300 mb-7 scroll-mt-24 header-sm:scroll-mt-20">
+
+					<div class="ml-2 mt-3 mr-3">
+						<h1 id="saving-header" class="text-2xl">Saving and Replaying Games:</h1>
+					</div>
+
+					<div class="ml-8 mt-3 mr-3">
+						<li>A player can save a match at any point, after at least one turn has passed. The current status, or the result, of the match is reported. Saved games can be replayed and edited, and those edits can be saved.</li>
+					</div>
+
+					<div class="ml-8 mt-3 mr-3">
+						<li>Currently, if a match has over <span class="font-bold">100</span> moves (<span class="font-bold">200</span> turns), that match will not be saved.</li>
+					</div>
+
+					<div class="ml-8 mt-3 mr-3">
+						<li>Currently, an account can have maximally <span class="font-bold">20</span> saved games at a time.</li>
+					</div>
+
+				</div>
+
+
+				<div id="elo-div" class="border-t border-gray-300 mb-7 scroll-mt-20">
+
+					<div class="ml-2 mt-3 mr-3">
+						<h1 id="elo-header" class="text-2xl">ELO:</h1>
+					</div>
+
+					<div class="ml-8 mt-3 mr-3">
+						<li>Players have a seperate <span class="font-bold">ELO</span> for each game mode. The starting ELO is <span class="font-bold">300</span>.</li>
+					</div>
+
+					<div class="ml-8 mt-3 mr-3">
+						<li>Players gain ELO when they win a match, and lose ELO when they lose a match. The amount of ELO exchanged depends on the initial difference between ELO scores, and whether the player with initially higher ELO, or intially lower ELO, won. Draws and stalmates result in no ELO exchange.</li>
+					</div>
+
+					<div class="ml-8 mt-3 mr-3">
+						<li>Players are ranked by ELO in the Leaderboards.</li>
+					</div>
+
+				</div>
+
+			</div>
+
+		</div>
+	</div>
+
+	<footer class="h-auto w-full min-w-96 mt-12 pb-2 bg-green-700 text-white border-t border-black" id="bottom-footer">
+		<div class="w-full flex flex-row justify-between mt-4">
+			<h1 class="ml-4">Brian Lemes</h1>
+			<h1><a class="hover:text-gray-700 underline" href="/home#about-section">About</a></h1>
+			<h1 class="mr-4">Contact: brian.a.lemes.1996@gmail.com</h1>
+		</div>
+		<div class="mt-2">
+			<h1 class="ml-3">&copy; Brian Lemes' Chess Website USA, Inc. All rights reserved.</h1>
+		</div>
+	</footer>
+
+<script src="../rulesPageApp.js"></script>	
+</body>
+
+</html>

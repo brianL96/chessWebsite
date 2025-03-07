@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+
+		<title>Admin Page</title>
+		<link rel="stylesheet" href="../css/adminSystemStyle.css">
+	</head>
+
+	<body>
+
+		<div id="admin-wrapper">
+
+			<header>
+				<div id="header-container">
+					<h1 id="header">Control Panel</h1>
+				</div>
+			</header>
+
+			<div id="room-display-panel">
+
+				<div id="signed-in-navbar">
+					<div id="start-signed-in-navbar">
+						<h2 id="signed-in-text">Currently Signed In</h2>
+					</div>
+					<div id="end-signed-in-navbar">
+						<button id="extend-session-btn" type="submit">Extend Session</button>
+						<button id="signout-btn" type="submit">Sign Out</button>
+					</div>
+				</div>
+
+				<div id="room-view-navbar">
+					<div id="room-view-selector">
+						<h2 id="gameModeSelect">Game Mode: Classic</h2>
+						<div id="room-view-dropdown">
+							<h2 id="classic-mode" clicked="true" name="Classic">Classic</h2>
+							<h2 id="koth-mode" clicked="false" name="K.O.T.H.">K.O.T.H.</h2>
+							<h2 id="cotlb-mode" clicked="false" name="C.O.T.L.B.">C.O.T.L.B.</h2>
+							<h2 id="speed-mode" clicked="false" name="Speed">Speed</h2>
+						</div>
+					</div>
+
+					<div id="display-start-section">
+						<h2 id="display-start-label">Start: </h2>
+						<input type="text" id="enter-start-display" placeholder="First Index">
+					</div>
+
+					<div id="display-end-section">
+						<h2 id="display-end-label">End: </h2>
+						<input type="text" id="enter-end-display" placeholder="Last Index">
+					</div>
+					<button id="display-rooms-btn">Display</button>
+				</div>
+
+				<div id="admin-info-panel">
+					<div id="admin-info-general-panel">
+						<div id="admin-info-general-topLine">
+							<div id="serverStart-text-container">
+								<h4 id="serverStart-text">Server Start: <span id="serverStart-span">---</span></h4>
+							</div>
+						</div>
+						<div id="admin-info-general-middleLine">
+							<div id="currentSessionStart-text-container">
+								<h4 id="currentSessionStart-text">Current Session Start: <span id="currentSessionStart-span">---</span></h4>
+							</div>
+						</div>
+						<div id="admin-info-general-bottomLine">
+							<div id="lastAdminSignIn-text-container">
+								<h4 id="lastAdminSignIn-text">Last Admin Sign-In: <span id="lastAdminSignIn-span">---</span></h4>
+							</div>
+						</div>
+					</div>
+					<div id="admin-info-specific-panel">
+						<div id="admin-info-specific-topLine">
+							<div id="totalAdminSignIns-text-container">
+								<h4 id="totalAdminSignIns-text">Total Admin Sign-Ins: <span id="totalAdminSignIns-span">---</span></h4>
+							</div>
+							<div id="totalGamesCompleted-text-container">
+								<h4 id="totalGamesCompleted-text">Total Games Completed: <span id="totalGamesCompleted-span">---</span></h4>
+							</div>
+						</div>
+						<div id="admin-info-specific-middleLine">
+							<div id="specificGamesCompleted-text-container">
+								<h4 id="specificGamesCompleted-text">Classic Games Completed: <span id="specificGamesCompleted-span">---</span></h4>
+							</div>
+							<div id="specificHighestOccupancy-text-container">
+								<h4 id="specificHighestOccupancy-text">Classic Highest Occupancy: <span id="specificHighestOccupancy-span">---</span></h4>
+							</div>
+						</div>
+						<div id="admin-info-specific-bottomLine">
+							<h4 id="specificHighestOccupancyTime-text">Classic Time Spent At Highest Occupancy: <span id="specificHighestOccupancyTime-span">---</span></h4>
+						</div>
+					</div>
+				</div>
+
+				<div id="amount-adjustment-panel">
+					<h4 id=amount-currently-available>Rooms Availiable: <span id=amount-available-span></span></h4>
+					<h4 id=amount-range>Adjustment Range (Min-Max): <span id=range-min-span></span><span id=range-max-span></span></h4>
+					<div id="actual-adjustment-panel">
+						<h4 id=adjust-prompt-text>Adjust Amount of Rooms:  </h4>
+						<input type="text" id="enter-adjustment" placeholder="New Amount">
+					</div>
+				
+					<button id="submit-amount-change">Apply Change</button>
+				</div>
+
+				<div id="state-adjustment-panel">
+					<div id="input-section">
+						<div id="range-start-section-input">
+							<h4 id="state-start-label">Start: </h4>
+							<input type="text" id="range-enter-start" placeholder="First Index">
+						</div>
+						<div id="range-end-section-input">
+							<h4 id="state-end-label">End: </h4>
+							<input type="text" id="range-enter-end" placeholder="Last Index">
+						</div>
+					</div>
+					<div id="state-button-section">
+						<button id="range-kick-btn">Kick Players</button>
+						<button id="range-off-btn">Turn Off Rooms</button>
+						<button id="range-on-btn">Turn On Rooms</button>
+					</div>
+				</div>
+
+				<div id="room-view-currentlyDisplayed">
+					<div id="currentlyDisplayed-container">
+						<h1 id="currentlyDisplayed">No Rooms Displayed</h1>
+					</div>
+				</div>
+
+				<div id="room-node-list"></div>
+			</div>
+
+		</div>
+
+		<!-- Confirmation Modal Box -->
+		<div id="confirm-modal">
+			<div id="confirm-modal-header">
+				<h2 id="confirm-modal-headerText">Confirm Action</h2>
+				<h3 id="confirm-modal-close">&#10005;</h3>
+			</div>
+			<div id="confirm-modal-messageContainer">
+				<h4 id="confirm-modal-messageText"></h4>
+			</div>
+
+			<div id="confirm-middleSection">
+				<div id="confirm-passwordError-outerContainer">
+					<div id="confirm-passwordError-innerContainer">
+						<h3 id="confirm-passwordError-text"></h3>
+					</div>
+				</div>
+				<div id="confirm-modal-password-outerContainer">
+					<div id="confirm-modal-password-innerContainer">
+						<input type="password" id="confirmation-enter-password" placeholder="Enter Password">
+					</div>
+				</div>
+			</div>
+
+			<div id="confirm-modal-buttonRow">
+				<button id="confirm-modal-confirmBtn" type="submit"><h2 id="confirm-modal-confirmBtn-text">Confirm</h2></button>
+				<button id="confirm-modal-cancelBtn" type="submit"><h2 id="confirm-modal-cancelBtn-text">Cancel</h2></button>
+			</div>
+		</div>
+
+		<!-- Error Modal Box -->
+		<div id="error-modal">
+			<div id="error-modal-header">
+				<h2 id="error-modal-headerText">Error</h2>
+				<h3 id="error-modal-close">&#10005;</h3>
+			</div>
+			<div id="error-modal-messageContainer">
+				<h4 id="error-modal-messageText"></h4>
+			</div>
+			<div id="error-modal-buttonRow">
+				<button id="error-modal-closeBtn" type="submit"><h2 id="error-modal-closeBtn-text">Continue</h2></button>
+			</div>
+		</div>
+
+
+		<!-- Extension Modal Box -->
+		<div id="extension-modal">
+			<div id="extension-modal-header">
+				<div id="extension-modal-headerText-container">
+					<h2 id="extension-modal-headerText">Extend Session</h2>
+				</div>
+				<div id="extension-modal-close-container">
+					<h3 id="extension-modal-close">&#10005;</h3>
+				</div>
+			</div>
+
+			<div id="extension-info-container">
+
+				<div id="extension-info-timerContainer">
+					<h4 id="extension-timer">Time Remaining: <span id="extension-timer-number">05:00</span>.</h4>
+				</div>
+
+				<div id="extension-info-remainderContainer">
+					<h4 id="extension-remainder">Your session has <span id="extension-remainder-number">2</span> extensions left.</h4>
+				</div>
+
+				<div id="extension-info-errorContainer">
+					<h4 id="extension-error"></h4>
+				</div>
+
+			</div>
+
+			<div id="extension-enter-password-container-outer">
+				<div id="extension-enter-password-container-inner">
+					<input type="password" id="extension-enter-password" placeholder="Enter Password">
+				</div>
+			</div>
+
+			<div id="extension-modal-buttonColumn">
+				<div id="extension-modal-buttonRow">
+					<button id="extension-modal-submitBtn" type="submit">Submit</button>
+				</div>
+			</div>
+		</div>
+
+		<footer id="bottom-footer">
+			<div id="bottom-footer-firstLine">
+				<h2 id="bottom-footer-name">Brian Lemes</h2>
+				<h2 id="bottom-footer-about-h2"><a id="bottom-footer-about" href="/home#about-section">About</a></h2>
+				<h2 id="bottom-footer-email">Contact: brian.a.lemes.1996@gmail.com</h2>
+			</div>
+			<div id="bottom-footer-secondLine">
+				<h2 id="bottom-footer-info">&copy; Brian Lemes' Chess Website USA, Inc. All rights reserved.</h2>
+			</div>
+		</footer>
+			
+		
+		<script src="/socket.io/socket.io.js"></script>
+		<script src="../adminSystemApp.js"></script>		
+	</body>
+</html>

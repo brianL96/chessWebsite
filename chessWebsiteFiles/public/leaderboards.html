@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Leaderboards Page</title>
+	<!--<link rel="stylesheet" type="text/css" href="../css/leaderboardsStyle.css">-->
+	<link rel="stylesheet" type="text/css" href="../css/output.css">
+</head>
+<body class="bg-cyan-700">
+
+	<div id="wrapper-div">
+		<nav class="min-w-104 flex flex-col h-24 justify-around header-sm:flex-row header-sm:h-16 header-sm:justify-start items-center border-b-2 border-black bg-sky-100 font-robot font-thin w-full fixed top-0 z-20" id="fixed-header">
+			<div class="flex flex-row justify-around w-full text-lg md:text-xl border-b-gray-300 border-b-2 header-sm:border-b-0" id="fixed-header-menu">
+				<h2 id="home-tag" class="hover:font-bold hover:scale-125 transition ease-out duration-75 hover:text-green-600"><a href="/home">Home</a></h2>
+				<h2 id="my-profile-tag" class=" hover:font-bold hover:scale-125 transition ease-out duration-75 hover:text-green-600" ><a href="/home/profile">My Profile</a></h2>
+				<h2 id="play-tag" class=" hover:font-bold hover:scale-125 transition ease-out duration-75 hover:text-green-600"><a href="/home/gamePage">Play Games</a></h2>
+				<h2 id="leaderboards-tag" class=" hover:font-bold hover:scale-125 transition ease-out duration-75 hover:text-green-600"><a href="/home/leaderboards">Leaderboards</a></h2>
+				<h2 id="rules-tag" class="hover:font-bold hover:scale-125 transition ease-out duration-75 hover:text-green-600"><a href="/home/rules">Rules</a></h2>
+			</div>
+		</nav>
+	</div>
+
+
+<div class="w-96 min-w-full m-auto min-h-screen">
+
+	<div id="main-container" class="flex flex-row justify-center mt-24 header-sm:mt-16">
+
+		<div id="leaderboard-container" class="flex flex-col mt-7 w-96 sm:w-120 md:w-130">
+
+			<div id="leaderboardsHeader" class="flex flex-col justify-center items-center">
+
+				<div id="headerText" class="flex justify-start items-center w-full h-20 bg-green-600 border-x-2 border-y-2 border-black border-solid">
+
+					<h1 id="gameMode" class="w-1/2 pl-10 text-lg text-white">Classic Chess</h1>
+
+					<div class="flex justify-center w-1/2">
+
+						<div class="flex flex-col w-3/4 relative">
+
+							<div class="text-center w-full bg-green-600 hover:bg-green-700 active:bg-green-800 duration-150">
+								<h1 id="useDrop" class="hover:cursor-pointer text-white border border-black text-center">Select Game Mode</h1>
+							</div>
+
+							<div id="dropList" class="hidden absolute mt-6 z-10 w-full h-64 md:h-48 bg-green-200 border-x border-b border-black">
+
+								<div id="classicLink" class="flex flex-col justify-center h-1/4 text-center hover:bg-green-300 hover:cursor-pointer">
+									<h2>Classic Chess</h2>
+								</div>
+								<div id="kothLink" class="flex flex-col justify-center h-1/4 text-center hover:bg-green-300 hover:cursor-pointer">
+									<h2>King Of The Hill</h2>
+								</div>
+								<div id="cotlbLink" class="flex flex-col justify-center h-1/4 text-center hover:bg-green-300 hover:cursor-pointer">
+									<h2>Charge Of The Light Brigade</h2>
+								</div>
+								<div id="speedLink" class="flex flex-col justify-center h-1/4 text-center hover:bg-green-300 hover:cursor-pointer">
+									<h2>Speed Chess</h2>
+								</div>
+							</div>
+						</div>
+
+					</div>
+
+				</div>
+				
+				<div id="columnText" class="flex justify-between w-full h-16 bg-emerald-600 text-white border-x-2  border-black border-solid">
+					<div>
+						<h1 class="w-16 h-full flex justify-center items-center">Rank</h1>
+					</div>
+					<div>
+						<h1 class="h-full flex justify-center items-center">Username</h1>
+					</div>
+					<div>
+						<h1 class="h-full w-24 flex justify-center items-center">Elo</h1>
+					</div>
+					
+				</div>
+				
+			</div>
+
+			<div id="leaderboardsPanel" class="flex flex-col justify-center items-center mb-20"></div>
+		</div>
+
+	</div>
+
+	
+
+</div>
+
+<footer class="h-auto w-full min-w-96 pb-2 mt-12 bg-green-700 text-white border-t border-black" id="bottom-footer">
+	<div class="w-full flex flex-row justify-between mt-4">
+		<h1 class="ml-4">Brian Lemes</h1>
+		<h1><a class="hover:text-gray-700 underline" href="/home#about-section">About</a></h1>
+		<h1 class="mr-4">Contact: brian.a.lemes.1996@gmail.com</h1>
+	</div>
+	<div class="mt-2">
+		<h1 class="ml-3">&copy; Brian Lemes' Chess Website USA, Inc. All rights reserved.</h1>
+	</div>
+</footer>
+
+	<script src="../leaderboardsApp.js"></script>
+</body>
+</html>

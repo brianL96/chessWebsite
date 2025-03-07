@@ -1,0 +1,97 @@
+body{
+	font-family: Arial, Helvetica;
+	background-color: #E6F7EC;
+}
+
+header h1{
+
+	color: green;
+	text-align: center;
+	font-size: 50px;
+
+}
+
+#login-form{
+
+
+	margin: auto;
+	width: 580px;
+	height: 200px;
+	
+	border-style: solid;
+	border-width: 3px;
+	border-color: green;
+	
+	padding-top: 20px;
+	background-color: #FFFFFF;
+
+}
+
+
+#login-form label{
+
+	font-size: 20px;
+	margin-left: 20px;
+	margin-right: 0;
+	display: inline-block;
+
+}
+
+
+#login-form span{
+	padding-top: 0;
+	padding-bottom: 0;
+	padding-left: 2px;
+	padding-right: 2px;
+	margin-left: 10px;
+	color: red;
+	font-size: 18px;
+}
+
+
+
+#login-form input[type="text"]{
+	width: 200px;
+	height: 30px;	
+	margin-bottom: 5px;
+	
+	display: inline-block;
+	border-style: solid;
+	border-width: 2px;
+	border-color: #3D823F;
+	border-radius: 4px;
+}
+
+
+#usernameBlock #username{
+	margin-left: 15px;
+}
+
+#passwordBlock #password{
+	margin-left: 19px;
+}
+
+
+
+#login-form .btn{
+	
+	margin-top: 40px;
+	margin-bottom: 20px;
+	margin-left: 190px;
+	margin-right: 52%;
+	
+	background-color: green;
+	color: white;
+	width: 200px;
+	height: 40px;
+	font-size: 24px;
+
+}
+
+
+
+
+
+
+
+

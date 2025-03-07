@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+
+	<head>
+		<meta charset="UTF-8"/>
+		<title>Player Profile</title>
+
+		
+		<link rel="stylesheet" type="text/css" href="../css/output.css">
+		<!--<link rel="stylesheet" href="../css/profileStyle.css">-->
+		
+	</head>
+
+<body class="bg-cyan-700">
+
+	<div class="w-105 min-w-full min-h-screen m-auto">
+
+		<div id="wrapper-div">
+			<nav class="min-w-105 flex flex-col h-24 justify-around header-sm:flex-row header-sm:h-16 header-sm:justify-start items-center border-b-2 border-black bg-sky-100 font-robot font-thin w-full fixed top-0 z-20" id="fixed-header">
+				<div class="flex flex-row justify-around w-full text-lg md:text-xl border-b-gray-300 border-b-2 header-sm:border-b-0" id="fixed-header-menu">
+					<h2 id="home-tag" class="hover:font-bold hover:scale-125 transition ease-out duration-75 hover:text-green-600"><a href="/home">Home</a></h2>
+					<h2 id="my-profile-tag" class=" hover:font-bold hover:scale-125 transition ease-out duration-75 hover:text-green-600" ><a href="/home/profile">My Profile</a></h2>
+					<h2 id="play-tag" class=" hover:font-bold hover:scale-125 transition ease-out duration-75 hover:text-green-600"><a href="/home/gamePage">Play Games</a></h2>
+					<h2 id="leaderboards-tag" class=" hover:font-bold hover:scale-125 transition ease-out duration-75 hover:text-green-600"><a href="/home/leaderboards">Leaderboards</a></h2>
+					<h2 id="rules-tag" class="hover:font-bold hover:scale-125 transition ease-out duration-75 hover:text-green-600"><a href="/home/rules">Rules</a></h2>
+				</div>
+			</nav>
+		</div>
+
+	
+		<div id="main-profile-container" class="flex flex-col justify-center items-center">
+
+			<div id="profile-header" class="w-105 sm:w-130 mb-10 bg-white h-48 rounded-xl mt-28 header-sm:mt-20">
+				<h2 id="username-label-header" class="text-center text-xl mb-3">Username:</h2>
+				<div id="username-header" class="text-center text-3xl sm:text-4xl mb-10">Not Signed In</div>
+				<h1 class="text-center text-2xl text-blue-600 underline" id="replay-link"><a href="replayPage">Play Saved Games</a></h1>
+			</div>
+
+
+			<div id="player-stat-box" class="flex flex-col justify-start items-center w-105 sm:w-130 h-96 rounded-xl bg-white">
+
+				<div class="flex flex-row justify-center h-1/6 w-full"> 
+					<h2 id="stats-header" class="text-2xl mt-3">View Your Gameplay Stats:</h2>
+				</div>
+
+				<div id="stats-holder" class="flex flex-col justify-around bg-gray-200 w-5/6 sm:w-3/4 h-72 border-blue-500 border">
+					<div id="game-mode-selected" class="flex justify-start items-center bg-blue-600 h-1/6">
+						<div class="flex justify-center w-1/2">
+							<div class="flex flex-col w-5/6 sm:w-3/4 relative">
+								<h3 id="select-game-mode-btn" class=" w-full bg-blue-500 hover:bg-blue-700 active:bg-blue-800 duration-150 hover:cursor-pointer text-white border border-black text-center">Select Game Mode</h3>
+								<div id="dropList" class="hidden absolute mt-6 z-10 w-full h-64 md:h-44 bg-white border-x border-b border-black">
+									<div id="selectClassic" class="flex flex-col justify-center h-1/4 hover:bg-blue-300 hover:cursor-pointer text-center">
+										<h2>Classic Chess</h2>
+									</div>
+									<div id="selectKOTH" class="flex flex-col justify-center h-1/4 text-center hover:bg-blue-300 hover:cursor-pointer">
+										<h2 >King Of The Hill</h2>
+									</div>
+									<div id="selectCOTLB" class="flex flex-col justify-center h-1/4 text-center hover:bg-blue-300 hover:cursor-pointer">
+										<h2 >Charge Of The Light Brigade</h2>
+									</div>
+									<div id="selectSpeed" class="flex flex-col justify-center h-1/4 text-center hover:bg-blue-300 hover:cursor-pointer">
+										<h2>Speed Chess</h2>
+									</div>
+								</div>
+
+							</div>
+						</div>
+
+						<div id="table-selected-container" class="flex justify-center w-1/2">
+							<h3 id="tableSelected" class="text-white text-center">Table Selected</h3>
+						</div>
+
+					</div>
+			
+					<div id="winStats" class="flex justify-start items-center bg-white h-1/6">
+						<h3 class="flex justify-center w-1/2">Wins:</h3>
+						<h3 id="winStat" class="flex justify-center w-1/2">#Wins</h3> 
+					</div>	
+
+					<div id="lossStats" class="flex justify-start items-center bg-gray-300 h-1/6">
+						<h3 class="flex justify-center w-1/2">Losses:</h3>
+						<h3 id="lossStat" class="flex justify-center w-1/2">#Losses</h3>
+					</div>
+
+					<div id="stalemateStats" class="flex justify-start items-center bg-white h-1/6">
+						<h3 class="flex justify-center w-1/2">Stalemates:</h3>
+						<h3 id="stalemateStat" class="flex justify-center w-1/2">#Stalemates</h3>
+					</div>
+
+					<div id="drawStats" class="flex justify-start items-center bg-gray-300 h-1/6">
+						<h3 class="flex justify-center w-1/2">Draws:</h3>
+						<h3 id="drawStat" class="flex justify-center w-1/2">#Draws</h3>
+					</div>
+
+					<div id="ratioStats" class="flex justify-start items-center bg-white h-1/6">
+						<h3 class="flex justify-center w-1/2">Win/Loss Ratio:</h3>
+						<h3 id="ratioStat" class="flex justify-center w-1/2">#win/lose ratio</h3>
+					</div>
+	
+				</div>
+
+			</div>
+
+
+
+			<div id="changePasswordSection" class="flex flex-col justify-start items-center w-105 sm:w-130 h-106 rounded-xl bg-white mt-10 mb-20">
+
+				<div class="h-1/4 w-full">
+					<div class="h-1/3">
+						<h2 id="password-label" class="text-2xl text-center w-full pt-2">Change Password</h2>
+					</div>
+					<div class="h-2/3 mt-3">
+						<h2 id="warning-label" class="text-gray-500 text-lg text-center w-full pl-2 pr-2">Note: You will be signed out after your password is successfully updated.</h2>
+					</div>
+				</div>
+
+				<div id="changePasswordInputs" class="flex flex-col justify-around w-full h-4/7">
+
+					<div id="oldPasswordBlock" class="flex flex-row justify-start items-center h-1/3 w-full mt-2 border-b border-gray-300">
+						<div class="w-1/3 h-full text-center">
+							<h3 class="text-lg">Current Password</h3>
+						</div>
+
+						<div class="flex flex-col justify-start h-full w-2/3">
+							<div class="flex flex-row justify-start h-1/2 w-full">
+								<div class="w-3/5 h-full">
+									<input type="password" id="old-password" placeholder="Old Password" class="border border-gray-500 focus:border-2 focus:border-green-600 focus:ring-0 focus:outline-none h-full w-full pl-2">
+								</div>
+								<div class="flex flex-row justify-center h-full w-3/8">
+									<button id="oldShowBtn" class="h-full w-2/3 bg-gray-300 hover:bg-gray-200 border border-black"><h2 id="oldShowBtn-text">Show</h2></button>
+								</div>
+							</div>
+							<div class="flex flex-col justify-center h-1/2 w-full">
+								<h3 id="oldPassError" class="text-red-600 text-lg"></h3>
+							</div>
+						</div>
+
+					</div>
+
+
+					<div id="newPasswordBlock" class="flex flex-row justify-start items-center h-1/3 w-full mt-3">
+						
+						<div class="w-1/3 h-full text-center">
+							<h3 class="text-lg">New Password</h3>
+						</div>
+
+						<div class="flex flex-col justify-start h-full w-2/3">
+							<div class="flex flex-row justify-start h-1/2 w-full">
+								<div class="w-3/5 h-full">
+									<input type="password" id="new-password" placeholder="New Password" class="border border-gray-500 focus:border-2 focus:border-green-600 focus:ring-0 focus:outline-none h-full w-full pl-2">
+								</div>
+								<div class="flex flex-row justify-center h-full w-3/8">
+									<button id="newShowBtn" class="h-full w-2/3 bg-gray-300 hover:bg-gray-200 border border-black"><h2 id="newShowBtn-text">Show</h2></button>
+								</div>
+							</div>
+							<div class="flex flex-col justify-center h-1/2 w-full">
+								<h3 id="newPassError" class="text-red-600 text-lg"></h3>
+							</div>
+						</div>
+						
+					</div>
+
+
+					<div id="confirmNewPasswordBlock" class="flex flex-row justify-start items-center h-1/3 w-full">
+
+						<div class="w-1/3 h-full text-center">
+							<h3 class="text-lg">Confirm New Password</h3>
+						</div>
+
+						<div class="flex flex-col justify-start h-full w-2/3">
+							<div class="flex flex-row justify-start h-1/2 w-full">
+								<div class="w-3/5 h-full">
+									<input type="password" id="confirm-newPassword" placeholder="New Password" class="border border-gray-500 focus:border-2 focus:border-green-600 focus:ring-0 focus:outline-none h-full w-full pl-2">
+								</div>
+							</div>
+							<div class="flex flex-col justify-center h-1/2 w-full">
+								<h3 id="confirmNewPassError" class="text-red-600 text-lg"></h3>
+							</div>
+						</div>
+						
+					</div>
+
+
+				</div>
+			
+				<div id="button-holder" class="flex flex-row justify-center w-full h-1/6">
+					<div class="flex flex-col justify-center">
+						<button id="passwordChangeBtn" class=" mt-2 w-36 h-12 bg-blue-600 border border-blue-800 text-white rounded cursor-pointer shadow hover:bg-blue-700 active:bg-blue-800 duration-150" type="submit"><h2>Change Password</h2></button>
+					</div>
+				</div>
+
+			</div>
+
+		</div>
+
+	</div>
+
+	<footer class="h-auto w-full min-w-105 mt-12 pb-2 bg-green-700 text-white border-t border-black" id="bottom-footer">
+		<div class="w-full flex flex-row justify-between mt-4">
+			<h1 class="ml-4">Brian Lemes</h1>
+			<h1><a class="hover:text-gray-700 underline" href="/home#about-section">About</a></h1>
+			<h1 class="mr-4">Contact: brian.a.lemes.1996@gmail.com</h1>
+		</div>
+		<div class="mt-2">
+			<h1 class="ml-3">&copy; Brian Lemes' Chess Website USA, Inc. All rights reserved.</h1>
+		</div>
+	</footer>
+		
+	<script src="../playerProfileApp.js"></script>
+</body>
+
+</html>
