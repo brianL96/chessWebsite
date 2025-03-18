@@ -12,7 +12,7 @@ Navigate to the root folder and in the command line run the following two comman
 >npm install  
 >npm run dev
 
-and the application will run on localhost:3000. However, most of the features on the site will be unavailable without a proper database setup. Having acquired access to a MySQL database, update the following variables inside accessFile.js in the root directory: `databaseHost`, databaseName, databaseUser, and databasePassword. You can also update the value for adminPassword, which is used to login to the admin page, and adminActionPassword, which must be entered whenever an admin wants to carry out an action.
+and the application will run on localhost:3000. However, most of the features on the site will be unavailable without a proper database setup. Having acquired access to a MySQL database, update the following variables inside accessFile.js in the root directory: `databaseHost`, `databaseName`, `databaseUser`, and `databasePassword`. You can also update the value for `adminPassword`, which is used to login to the admin page, and `adminActionPassword`, which must be entered whenever an admin wants to carry out an action.
 
 ## Future Updates:
 
