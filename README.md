@@ -18,6 +18,7 @@ and the application will run on localhost:3000. However, most of the features on
 
 ## Future Updates:
 The frontend should be refactored from plain JavaScript and HTML to React -- it'll make maintaining the site easier.
+
 Want to introduce a single player mode to incentivize users to play on the site while overall concurrent users may be low. Want to add multiple single player modes that incorporate rogue-like elements to challenge the player. 
 
 
