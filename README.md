@@ -7,7 +7,7 @@ Chess website. Players can play in different rooms across different game modes, 
 JavaScript, HTML, and Tailwind for most of the frontend. The admin page uses regular CSS. SocketIO is used for connecting users to different rooms within different game modes, and for keeping track of disconnects. MySQL for the database, and the mysql2 node package for controlling a pool of connections to the database.
 
 ## How It Works:
-
+Before a user can connect to a room, their credentials are sent via a HTTP request. Upon confirmation, a socketIO connection is established between the client and the server. The server uses timers to make sure users don't idle inside a room for too long, and will boot players if no initial move is made by one or both players, or if no rematch is agreed upon within a given time. Fair warnings are sent beforehand at regular intervals. 
 
 ## Running Locally:
 Navigate to the root folder and in the command line run the following two commands:
